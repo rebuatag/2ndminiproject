@@ -1,7 +1,3 @@
----
-output: html_document
----
-
 ## run_analysis.R description
 The original data in this dataset has been reshaped in order to have all of the necessary information in a single tidy dataset. After loading packages and reading files, the train and test datasets now include the subject and activity information. Moreso, the resulting train and test datasets were also merged or combined. Following that, only a subset of the features, those with the mean and standard deviation values, were extracted. Variable names have been replaced by removing special characters and expanding the names into a much more comprehensible one. 
 
