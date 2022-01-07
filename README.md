@@ -24,7 +24,7 @@ data until having a tidy data.
 c. Submit the R and md file in your github repository.
 ```
 ### PROBLEM #2
-````
+```
 Download the zipped file household_power_consumption.zip from the LMS. Unzip the file and create a directory 
 ‘specdata’ in your local file. DO NOT make any modifications in the files included in the zipped file. The data set is 
 about the measurements of electric power consumption in one household with a one-minute sampling rate over a 
