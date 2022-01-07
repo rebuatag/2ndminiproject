@@ -1,9 +1,9 @@
-# Second Mini Project
+# First Mini Project (R Programming)
+CMSC 197: Introduction to Data Science
 
-#### This is a 2nd Mini Project in CMSC 197: Introduction to Data Science
-
-PROBLEMS:
-`Download the zipped file UCI_HAR_Dataset.zip from the LMS. Unzip the file and create a directory ‘specdata’ 
+### PROBLEM #1
+```
+Download the zipped file UCI_HAR_Dataset.zip from the LMS. Unzip the file and create a directory ‘specdata’ 
 in your local file. DO NOT make any modifications in the files included in the zipped file. The data set is about 
 Human Activity Recognition Using Smartphones. The data includes were collected from the accelerometers from the 
 Samsung Galaxy S smartphone. You can check the full description of the dataset from 
@@ -18,9 +18,11 @@ for each activity and each subject.
 b. Create a README.md which explains how all the scripts work and how they are connected. This should 
 include the step-by-step procedures that you did in any transformations or how you performed to clean up the 
 data until having a tidy data. 
-c. Submit the R and md file in your github repository.`
-
-`Download the zipped file household_power_consumption.zip from the LMS. Unzip the file and create a directory 
+c. Submit the R and md file in your github repository.
+```
+### PROBLEM #2
+````
+Download the zipped file household_power_consumption.zip from the LMS. Unzip the file and create a directory 
 ‘specdata’ in your local file. DO NOT make any modifications in the files included in the zipped file. The data set is 
 about the measurements of electric power consumption in one household with a one-minute sampling rate over a 
 period of almost 4 years. Different electrical quantities and some sub-metering values are available. The full 
@@ -42,4 +44,5 @@ Your task is to construct the following plots below using the dataset:
 • Construct the 4 plots in just one R file called plots.R. Write some comments in your R script to 
 separate each part of the script for each plot. Your code should include code for reading the data 
 so that the plot can be fully reproduced. Include also the code that creates the PNG file. 
-• Name each of the generated plot files as plot1.png, plot2.png, plot3.png, and plot4.png`
+• Name each of the generated plot files as plot1.png, plot2.png, plot3.png, and plot4.png
+```
