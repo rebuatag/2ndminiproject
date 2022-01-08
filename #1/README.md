@@ -17,10 +17,11 @@ Generally, the following steps were taken in order to achieve the final tidy dat
 3. Row bind the train and test data frames that were created to create a single data set.
 
 #### Step 2 Extracts only the measurements on the mean and standard deviation for each measurement
-1. Create a data frame variable that contains feature labels with the target feature label 'mean()'.
+1. Create a data frame variable that contains labels with the target feature label 'mean()'. 
 2. Create another data frame variable that contains feature labels with the target feature label 'std()'.
-3. Create and store in a vector the mean and std data frame with Subject and Activities string labels.
-Subset the overall single data set to extract only the mean, standard deviation, Subject, and Activities values which were stored in a vector from the previous step.
+3. Searching and extracting for the target labels (mean and std) was achieved using the gsub() function.
+4. Create and store in a vector the mean and std data frame with Subject and Activities string labels.
+5. Subset the overall single data set to extract only the mean, standard deviation, Subject, and Activities values which were stored in a vector from the previous step.
 
 #### Step 3 Uses descriptive activity names to name the activities in the dataset
 1. As identified and retrieved from activity_labels.txt, rename the numerical labels of activities into the corresponding descriptive labels.
