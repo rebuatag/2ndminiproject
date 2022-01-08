@@ -99,7 +99,7 @@ header_labels <- sub("Group.2", "Activities", header_labels)
 
 # assigning back the descriptive variable names to the data frame final_tidy_data 
 # this as well results to the final tidy data set for this problem
-header_labels -> names(final_tidy_data)
+names(final_tidy_data) <- header_labels
 
 # creating the Tidy_Dataset file which contains final_tidy_data contents using the write.table function
 # the name of the file for the final tidy data is Tidy_dataset which can be found in the same directory as this code
