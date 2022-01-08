@@ -27,69 +27,23 @@ Subset the overall single data set to extract only the mean, standard deviation,
 
 #### Step 4 Appropriately labels the data set with descriptive variable names 
 1. By examining the data, the following labels could be replaced using the sub() function to achieve much comprehensive and descriptive labels.
-- "^f" replaced with Frequency
-- "^t" replaced with Time
-- "Acc" can be replaced with Accelerometer
-- "-mean.." replaced with Mean
-- "-X" replaced with Xaxis
-- "-Y" replaced with Yaxis
-- "-Z" replaced with Zaxis
-- "-std.." replaced with StandardDeviation.
-- "Gyro" can be replaced with Gyroscope
-- "BodyBody" can be replaced with Body
-- "Mag" can be replaced with Magnitude
-- "Group.1" replaced with Subject
-- "Group.2" replaced with Activities
+    - "^f" replaced with Frequency
+    - "^t" replaced with Time
+    - "Acc" can be replaced with Accelerometer
+    - "-mean.." replaced with Mean
+    - "-X" replaced with Xaxis
+    - "-Y" replaced with Yaxis
+    - "-Z" replaced with Zaxis
+    - "-std.." replaced with StandardDeviation.
+    - "Gyro" can be replaced with Gyroscope
+    - "BodyBody" can be replaced with Body
+    - "Mag" can be replaced with Magnitude
+    - "Group.1" replaced with Subject
+    - "Group.2" replaced with Activities
 
 #### Step 5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 1. Using the aggregate() function to group the tidy data set by activities and subject and taking the mean of each group.
-2. Removing the agrregate function generated columns.
+2. Removing the aggregate function generated columns.
 3. From Step 4, assign the descriptive header labels to the final tidy data set as its column headers.
 4. Using the write.table() function, create a text file called "Tidy_Dataset" that contains the final tidy data set.
 
-
-
-#### Line by line explanation of code
-
-- Line 2 is the instruction for loading the required package to be used in the solution of this problem, that is in this case I used the data.table package.
-
-- Line 6 to 8 is the reading of the test data sets namely subject_test (Subject), y_test (Activities), and x_test (measurements) files and assigning it to variables of the same name as well.
-
-- Line 7 to 13 is the reading of the train data sets namely subject_train (Subject), y_train (Activities), and x_train (measurements) files and assigning it to variables of the same name as well.
-
-- Line 16 is the reading of the features text file and assigning it to variable of the same name as well.
-
-- Line 19 is the instruction for extracting the features$labels column from the features data table to a vector which is then assigned in header_features_labels. 
-- Line 22 is the instruction for assigning the header_features_labels as a header for the x_test data table which primarily contains measurement values.
-
-- Line 25 and 28 is the extraction of the Subject and Activities from the subject_test and y_test to a vector, respectively, and assigning it to Subject and Activities variable names.
-
-- Line 31 is the instruction for binding the Activities and Subjects with the measurement values from the x_test column wise.
-
-- Line 34, the same instruction with line 22 is applied here such that header_features_labels is assigned as a header to the x_train measurement values.
-
-- Line 37 and 40 adopts the same instruction from Lines 25 and 28, however in this case Subject and Activities come from subject_train and y_train, respectively.
-
-- Line 43 is the same instruction as with Line 31 however in this instruction I am binding the Activities and Subject with the measurement values from x_train by column.
-
-- Line 46 is the instruction for merging the test and train data sets by row and then stored in the variable merged_data.
-
-- Line 51 and 54 is the extraction of the measurements in means and standard deviation of each measurement which is stored in the header_features_labels variable with values mean() and std(). I am using grep() function to search for matches of "mean()" and "std()" strings. Matches of means is stored in mean_values variable while matches with std are stored in std_values variable.
-
-- Line 57 is the instruction for combining the mean_values, std_values and the Subject and Activities.
-
-- Line 60 is the process or instruction for tidying the data using the subset() function to select the mean_and_std from the merged_data and assign it to tidy_data variable.
-
-- Lines 65 to 70 are for replacing numerical variable names with descriptive variable names as found in activity_labels text file. The instruction is done by using the gsub() function to search for the activity names (1st argument) and replacing them with descriptive ones' (2nd argument) from the tidy_data activities column then assigning them back to the same column.
-
-- Line 75 is the instruction for creating a second, independent tidy data set (final_tidy_data) which contains the average of each variable(activities and subjects) such that I used the aggregate() function to compute for the summary statistics (mean) for the subset of the data (subject and activities). The arguments for this function is the tidy_data , the list of variables (Subject, Activities), and the function (FUN = mean) which is the mean for which to be applied.
-
-- Line 78 is for the removal of the generated columns by the aggregate function in Line 75.
-
-- Line 82 is for assigning the column names or header names of the final_tidy_data to the header_labels. This will be used for appropriately labeling the data set by replacing it with descriptive header names.
-
-- Line 86 to 98 is the instruction for replacing the given strings (which can be identified by running the names(final_tidy_data)) which is given as the first argument of the sub-function, into a much expounded and comprehensible header name (2nd argument of the sub-function).
-
-- Line 102 is the instruction for assigning back the descriptive variable names to the data frame final_tidy_data. Moreover, this is the resulting tidy data set for this problem.
-
-- Line 106 is the code for creating the Tidy_Dataset file which contains final_tidy_data contents using the write.table function. The name of the file for the final tidy data is Tidy_Dataset which can be found in the same directory as the run_analysis.R.
