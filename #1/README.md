@@ -24,7 +24,13 @@ Generally, the following steps were taken in order to achieve the final tidy dat
 5. Subset the overall single data set to extract only the mean, standard deviation, Subject, and Activities values which were stored in a vector from the previous step.
 
 #### Step 3 Uses descriptive activity names to name the activities in the dataset
-1. As identified and retrieved from activity_labels.txt, rename the numerical labels of activities into the corresponding descriptive labels.
+1. As identified and retrieved from activity_labels.txt, rename the numerical labels of activities into the corresponding descriptive labels as follows.
+    - 1 replaced to WALKING
+    - 2 replaced to WALKING_UPSTAIRS
+    - 3 replaced to WALKING_DOWNSTAIRS
+    - 4 replaced to SITTING
+    - 5 replaced to STANDING
+    - 6 replaced to LAYING
 
 #### Step 4 Appropriately labels the data set with descriptive variable names 
 1. By examining the data, the following labels could be replaced using the sub() function to achieve much comprehensive and descriptive labels.
